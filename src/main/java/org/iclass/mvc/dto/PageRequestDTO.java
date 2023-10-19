@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -37,7 +38,9 @@ public class PageRequestDTO {
 	private String[] types;
 	private String keyword;
 	private boolean finished;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate from;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate to;
 
 	//▼ 검색 기능 제외하고 테스트용으로 남겨둠

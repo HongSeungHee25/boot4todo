@@ -55,8 +55,8 @@
                             <input type="text" name="keyword" class="form-control" th:value="${pageRequestDTO.keyword}">
                         </div>
                         <div class="input-group mb-3 dueDateDiv">
-                            <input type="date" name="from" class="form-control" th:value="${#dates.format(pageRequestDTO.from,'yyyy-MM-dd')}">
-                            <input type="date" name="to" class="form-control" th:value="${#dates.format(pageRequestDTO.to,'yyyy-MM-dd')}">
+                            <input type="date" name="from" class="form-control" th:value="${pageRequestDTO.from}">
+                            <input type="date" name="to" class="form-control" th:value="${pageRequestDTO.to}">
                         </div>
                         <div class="input-group mb-3">
                             <div class="front-end">
